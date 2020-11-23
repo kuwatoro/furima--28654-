@@ -2,11 +2,19 @@
 
 ## users テーブル
 
-| Column    | Type   | Options                        |
-| --------- | ------ | ------------------------------ |
-| name      | string | null: false                    | 
-| email     | string | null: false, uniqe: true       |
-| password  | string | null: false                    |
+| Column           | Type    | Options                        |
+| ---------------- | ------- | ------------------------------ |
+| nickname         | string  | null: false                    |
+| email            | string  | null: false, uniqe: true       |
+| password         | string  | null: false                    |
+| password_check   | string  | null: false                    |
+| surname_kanji    | string  | null: false                    |
+| name_kanji       | string  | null: false                    |
+| surname_katakana | string  | null: false                    |
+| name_katakana    | string  | null: false                    |
+| year_id          | integer | null: false                    |
+| month_id         | integer | null: false                    |
+| day_id           | integer | null: false                    |
 
 ### Association
 
@@ -17,7 +25,6 @@
 
 | Column             | Type    | Options                        |
 | ------------------ | ------- | ------------------------------ |
-| image              | string  | null: false                    |
 | goods              | string  | null: false                    |
 | goods_explain      | text    | null: false                    |
 | seller_id          | integer | null: false, foreign_key: true |

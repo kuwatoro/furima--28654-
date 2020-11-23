@@ -1,19 +1,11 @@
-<mxfile host="65bd71144e" modified="2020-11-22T12:03:06.640Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.0 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" version="13.6.5" etag="2SM_rkF4zP2WOmnPLc2J">
+<mxfile host="65bd71144e" modified="2020-11-23T10:04:04.254Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.0 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" version="13.6.5" etag="inEmpDAWOo0yInq2LJfJ">
     <diagram id="kzLrD-IIlXTSUmSy00nu" name="ページ1">
         <mxGraphModel dx="524" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F1FAEE" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="46" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;jumpStyle=sharp;jumpSize=21;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;startSize=20;sourcePerimeterSpacing=0;endArrow=ERone;endFill=0;endSize=20;targetPerimeterSpacing=100;strokeColor=#457B9D;strokeWidth=3;fillColor=#A8DADC;fontColor=#1D3557;" edge="1" parent="1" source="20" target="21">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
                 <mxCell id="20" value="" style="whiteSpace=wrap;html=1;fontSize=16;align=center;verticalAlign=top;horizontal=1;textDirection=ltr;labelPosition=center;verticalLabelPosition=middle;rounded=1;fillColor=#A8DADC;strokeColor=#457B9D;fontColor=#1D3557;" parent="1" vertex="1">
-                    <mxGeometry x="290" y="32.5" width="240" height="257.5" as="geometry"/>
-                </mxCell>
-                <mxCell id="39" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=14;fontColor=#1D3557;spacingTop=0;spacing=0;spacingRight=0;spacingBottom=0;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;jumpSize=21;jumpStyle=sharp;strokeWidth=3;targetPerimeterSpacing=100;sourcePerimeterSpacing=0;labelBackgroundColor=#F1FAEE;strokeColor=#457B9D;endSize=20;startSize=20;entryX=-0.004;entryY=0.386;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="19" target="20" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="272" y="250" as="targetPoint"/>
-                    </mxGeometry>
+                    <mxGeometry x="402.5" y="21.25" width="240" height="257.5" as="geometry"/>
                 </mxCell>
                 <mxCell id="41" style="edgeStyle=none;rounded=1;jumpStyle=sharp;jumpSize=21;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;startSize=20;endArrow=ERmany;endFill=0;endSize=20;targetPerimeterSpacing=100;strokeWidth=3;fontSize=14;fontColor=#1D3557;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#F1FAEE;strokeColor=#457B9D;sourcePerimeterSpacing=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="19" target="21" edge="1">
                     <mxGeometry relative="1" as="geometry">
@@ -21,41 +13,47 @@
                         <mxPoint x="180" y="250" as="sourcePoint"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="58" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;jumpStyle=sharp;jumpSize=21;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;startSize=20;sourcePerimeterSpacing=0;endArrow=ERmany;endFill=0;endSize=20;targetPerimeterSpacing=100;strokeColor=#457B9D;strokeWidth=3;fillColor=#A8DADC;fontColor=#1D3557;" edge="1" parent="1" source="19" target="20">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
                 <mxCell id="19" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=16;labelBackgroundColor=none;noLabel=1;rounded=1;fillColor=#A8DADC;strokeColor=#457B9D;fontColor=#1D3557;arcSize=30;" parent="1" vertex="1">
-                    <mxGeometry x="20" y="56.25" width="200" height="150" as="geometry"/>
+                    <mxGeometry x="15" y="20" width="275" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;jumpStyle=sharp;jumpSize=21;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.473;entryY=1.005;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=ERone;startFill=0;startSize=20;sourcePerimeterSpacing=0;endArrow=ERone;endFill=0;endSize=20;targetPerimeterSpacing=100;strokeColor=#457B9D;strokeWidth=3;fillColor=#A8DADC;fontColor=#1D3557;" edge="1" parent="1" source="21" target="20">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="21" value="" style="whiteSpace=wrap;html=1;fontSize=16;rounded=1;fillColor=#A8DADC;strokeColor=#457B9D;fontColor=#1D3557;" parent="1" vertex="1">
-                    <mxGeometry x="20" y="290" width="200" height="180" as="geometry"/>
+                    <mxGeometry x="52.5" y="375.5" width="200" height="180" as="geometry"/>
                 </mxCell>
                 <mxCell id="55" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;jumpStyle=sharp;jumpSize=21;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;startSize=20;sourcePerimeterSpacing=0;endArrow=ERone;endFill=0;endSize=20;targetPerimeterSpacing=100;strokeColor=#457B9D;strokeWidth=3;fillColor=#A8DADC;fontColor=#1D3557;" edge="1" parent="1" source="22" target="21">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="22" value="" style="whiteSpace=wrap;html=1;fontSize=16;rounded=1;fontStyle=1;fillColor=#A8DADC;strokeColor=#457B9D;fontColor=#1D3557;" parent="1" vertex="1">
-                    <mxGeometry x="480" y="360" width="210" height="140" as="geometry"/>
+                    <mxGeometry x="530" y="440" width="210" height="140" as="geometry"/>
                 </mxCell>
                 <mxCell id="26" value="items" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=16;fontStyle=1;rounded=1;fontColor=#1D3557;" parent="1" vertex="1">
-                    <mxGeometry x="355" y="40" width="70" height="27.5" as="geometry"/>
+                    <mxGeometry x="475" y="16.25" width="70" height="27.5" as="geometry"/>
                 </mxCell>
                 <mxCell id="27" value="&lt;ul style=&quot;font-size: 14px&quot;&gt;&lt;li style=&quot;font-size: 14px&quot;&gt;商品の画像&lt;/li&gt;&lt;li style=&quot;font-size: 14px&quot;&gt;商品名　　&lt;/li&gt;&lt;li style=&quot;font-size: 14px&quot;&gt;商品の説明&lt;/li&gt;&lt;li style=&quot;font-size: 14px&quot;&gt;出品者&lt;/li&gt;&lt;li style=&quot;font-size: 14px&quot;&gt;カテゴリー　　&lt;/li&gt;&lt;li style=&quot;font-size: 14px&quot;&gt;商品の状態&lt;/li&gt;&lt;li style=&quot;font-size: 14px&quot;&gt;値段&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;belongs_to :user&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;has_one :buy&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=14;rounded=1;spacing=0;fontColor=#1D3557;" parent="1" vertex="1">
-                    <mxGeometry x="302.5" y="51.25" width="227.5" height="228.75" as="geometry"/>
+                    <mxGeometry x="414" y="30.63" width="227.5" height="228.75" as="geometry"/>
                 </mxCell>
-                <mxCell id="31" value="&lt;ul style=&quot;font-size: 14px&quot;&gt;&lt;li style=&quot;font-size: 14px&quot;&gt;名前&lt;/li&gt;&lt;li style=&quot;font-size: 14px&quot;&gt;メールアドレス&lt;/li&gt;&lt;li style=&quot;font-size: 14px&quot;&gt;パスワード&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;has_many :item&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;has_many :buy&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=14;rounded=1;arcSize=22;fontColor=#1D3557;" parent="1" vertex="1">
-                    <mxGeometry x="35" y="70" width="170" height="110" as="geometry"/>
+                <mxCell id="31" value="&lt;ul style=&quot;font-size: 14px&quot;&gt;&lt;li style=&quot;font-size: 14px&quot;&gt;ニックネーム&lt;/li&gt;&lt;li style=&quot;font-size: 14px&quot;&gt;メールアドレス&lt;/li&gt;&lt;li style=&quot;font-size: 14px&quot;&gt;パスワード&lt;/li&gt;&lt;li style=&quot;font-size: 14px&quot;&gt;パスワード（確認用）&lt;/li&gt;&lt;li style=&quot;font-size: 14px&quot;&gt;苗字、名前（漢字）&lt;/li&gt;&lt;li style=&quot;font-size: 14px&quot;&gt;苗字、名前（カタカナ）&lt;/li&gt;&lt;li style=&quot;font-size: 14px&quot;&gt;生年月日（年、月、日）&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;has_many :item&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;has_many :buy&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=14;rounded=1;arcSize=22;fontColor=#1D3557;" parent="1" vertex="1">
+                    <mxGeometry x="45" y="40" width="215" height="210" as="geometry"/>
                 </mxCell>
                 <mxCell id="32" value="users" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=16;fontStyle=1;rounded=1;fontColor=#1D3557;" parent="1" vertex="1">
-                    <mxGeometry x="85" y="60" width="70" height="30" as="geometry"/>
+                    <mxGeometry x="117.5" y="20" width="70" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="34" value="buys" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontColor=#1D3557;fontSize=16;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="77.5" y="290" width="85" height="30" as="geometry"/>
+                    <mxGeometry x="110" y="375.5" width="85" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="35" value="&lt;ul style=&quot;font-size: 14px&quot;&gt;&lt;li style=&quot;font-size: 14px&quot;&gt;購入者&lt;/li&gt;&lt;li style=&quot;font-size: 14px&quot;&gt;購入日&lt;/li&gt;&lt;li style=&quot;font-size: 14px&quot;&gt;購入品&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;belongs_to :user&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;belongs_to :item&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;has_one :residence&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontSize=14;fontColor=#1D3557;horizontal=1;" parent="1" vertex="1">
-                    <mxGeometry x="30" y="302.5" width="170" height="155" as="geometry"/>
+                    <mxGeometry x="67.5" y="388" width="170" height="155" as="geometry"/>
                 </mxCell>
                 <mxCell id="37" value="&lt;font size=&quot;1&quot;&gt;&lt;b style=&quot;font-size: 16px&quot;&gt;residences&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontSize=14;fontColor=#1D3557;" parent="1" vertex="1">
-                    <mxGeometry x="530" y="360" width="100" height="40" as="geometry"/>
+                    <mxGeometry x="590" y="440" width="100" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="38" value="&lt;ul&gt;&lt;li&gt;配送料　&lt;/li&gt;&lt;li&gt;地域（都道府県）&lt;/li&gt;&lt;li&gt;発送までの日数&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;　　belongs_to :buy&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontSize=14;fontColor=#1D3557;" parent="1" vertex="1">
-                    <mxGeometry x="480" y="380" width="210" height="109" as="geometry"/>
+                    <mxGeometry x="535" y="460" width="210" height="109" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
