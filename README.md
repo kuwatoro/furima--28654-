@@ -20,17 +20,18 @@
 
 ## items テーブル
 
-| Column          | Type    | Options                        |
-| --------------- | ------- | ------------------------------ |
-| goods           | string  | null: false                    |
-| goods_explain   | text    | null: false                    |
-| user            | integer | null: false, foreign_key: true |
-| category        | integer | null: false                    |
-| goods_condition | integer | null: false                    |
-| shipping_fee    | integer | null: false                    |
-| prefectures     | integer | null: false                    |
-| delivery_time   | integer | null: false                    |
-| price           | integer | null: false                    |
+| Column             | Type    | Options                        |
+| ------------------ | ------- | ------------------------------ |
+| goods              | string  | null: false                    |
+| goods_explain      | text    | null: false                    |
+| user               | integer | null: false, foreign_key: true |
+| category_id        | integer | null: false                    |
+| goods_condition_id | integer | null: false                    |
+| shipping_fee_id    | integer | null: false                    |
+| prefectures_id     | integer | null: false                    |
+| delivery_time_id   | integer | null: false                    |
+| buy                | integer | null: false, foreign_key: true |
+| price              | integer | null: false                    |
 
 ### Association
 
@@ -48,23 +49,19 @@
 | --------- | ------- | ------------------------------ |
 | user      | integer | null: false, foreign_key: true |
 | item      | integer | null: false, foreign_key: true |
-| residence | integer | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
 - belongs_to :item
-- belongs_to :residence
+- has_one :residence
 
 ## residences テーブル
 
 | Column           | Type    | Options     |
 | ---------------- | ------- | ----------- |
-| card_number      | integer | null: false |
-| expiration_date  | integer | null: false |
-| security_code    | integer | null: false |
-| zip_code         | integer | null: false |
-| prefectures      | integer | null: false |
+| zip_code         | string  | null: false |
+| prefectures_id   | integer | null: false |
 | municipality     | string  | null: false |
 | street_number    | string  | null: false |
 | building_name    | string  |             |
@@ -72,6 +69,6 @@
 
 ### Association
 
-- has_one :buy
+- belongs_to :buy
 - has_one_active_hash :prefectures
 
