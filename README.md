@@ -30,7 +30,7 @@
 | shipping_fee_id    | integer | null: false                    |
 | prefectures_id     | integer | null: false                    |
 | delivery_time_id   | integer | null: false                    |
-| buy_id             | integer | null: false, foreign_key: true |
+| buy                | integer | null: false                    |
 | price              | integer | null: false                    |
 
 ### Association
