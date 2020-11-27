@@ -30,6 +30,7 @@
 | shipping_fee_id    | integer    | null: false                    |
 | prefectures_id     | integer    | null: false                    |
 | delivery_time_id   | integer    | null: false                    |
+| users_items        | references | null: false, foreign_key: true |
 | price              | integer    | null: false                    |
 
 ### Association
@@ -42,12 +43,12 @@
 - belongs_to_active_hash :prefectures
 - belongs_to_active_hash :delivery_time
 
-## buys テーブル
+## users_items テーブル
 
-| Column    | Type    | Options                        |
-| --------- | ------- | ------------------------------ |
-| user_id   | integer | null: false, foreign_key: true |
-| item_id   | integer | null: false, foreign_key: true |
+| Column    | Type       | Options                        |
+| --------- | ---------- | ------------------------------ |
+| user      | references | null: false, foreign_key: true |
+| item      | references | null: false, foreign_key: true |
 
 ### Association
 
