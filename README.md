@@ -11,7 +11,7 @@
 | name_kanji         | string | null: false                    |
 | surname_katakana   | string | null: false                    |
 | name_katakana      | string | null: false                    |
-| birthday           | data   | null: false                    |
+| birthday           | date   | null: false                    |
 
 ### Association
 
