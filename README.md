@@ -25,7 +25,6 @@
 | name               | string     | null: false                    |
 | goods_explain      | text       | null: false                    |
 | user               | references | null: false, foreign_key: true |
-| user_item          | references | null: false                    |
 | category_id        | integer    | null: false                    |
 | goods_condition_id | integer    | null: false                    |
 | shipping_fee_id    | integer    | null: false                    |
@@ -66,7 +65,7 @@
 | street_number    | string     | null: false                    |
 | building_name    | string     |                                |
 | telephone_number | string     | null: false                    |
-| users_items      | references | null: false, foreign_key: true |
+| user_item        | references | null: false, foreign_key: true |
 
 ### Association
 
