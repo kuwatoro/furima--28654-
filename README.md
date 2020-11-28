@@ -25,7 +25,7 @@
 | name               | string     | null: false                    |
 | goods_explain      | text       | null: false                    |
 | user               | references | null: false, foreign_key: true |
-| users_items        | references | null: false, foreign_key: true |
+| user_item          | references | null: false                    |
 | category_id        | integer    | null: false                    |
 | goods_condition_id | integer    | null: false                    |
 | shipping_fee_id    | integer    | null: false                    |
@@ -36,7 +36,7 @@
 ### Association
 
 - belongs_to :user
-- has_one ：users_items
+- has_one ：user_item
 - belongs_to_active_hash :category 
 - belongs_to_active_hash :goods_condition
 - belongs_to_active_hash :shipping_fee
