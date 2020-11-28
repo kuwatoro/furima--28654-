@@ -16,7 +16,7 @@
 ### Association
 
 - has_many :items
-- has_many :buys
+- has_many :users_items
 
 ## items テーブル
 
@@ -28,7 +28,7 @@
 | category_id        | integer    | null: false                    |
 | goods_condition_id | integer    | null: false                    |
 | shipping_fee_id    | integer    | null: false                    |
-| prefectures_id     | integer    | null: false                    |
+| prefecture_id      | integer    | null: false                    |
 | delivery_time_id   | integer    | null: false                    |
 | users_items        | references | null: false, foreign_key: true |
 | price              | integer    | null: false                    |
@@ -36,11 +36,11 @@
 ### Association
 
 - belongs_to :user
-- has_one :buy
+- belongs_to :users_items
 - belongs_to_active_hash :category 
 - belongs_to_active_hash :goods_condition
 - belongs_to_active_hash :shipping_fee
-- belongs_to_active_hash :prefectures
+- belongs_to_active_hash :prefecture
 - belongs_to_active_hash :delivery_time
 
 ## users_items テーブル
@@ -53,7 +53,7 @@
 ### Association
 
 - belongs_to :user
-- belongs_to :item
+- has_one :item
 - has_one :residence
 
 ## residences テーブル
@@ -61,14 +61,14 @@
 | Column           | Type    | Options     |
 | ---------------- | ------- | ----------- |
 | zip_code         | string  | null: false |
-| prefectures_id   | integer | null: false |
+| prefecture_id    | integer | null: false |
 | municipality     | string  | null: false |
 | street_number    | string  | null: false |
 | building_name    | string  |             |
-| telephone_number | integer | null: false |
+| telephone_number | string  | null: false |
 
 ### Association
 
-- belongs_to :buy
-- has_one_active_hash :prefectures
+- belongs_to ：users_items
+- has_one_active_hash :prefecture
 
