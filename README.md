@@ -35,7 +35,7 @@
 ### Association
 
 - belongs_to :user
-- has_one ：user_item
+- has_one :user_item
 - belongs_to_active_hash :category 
 - belongs_to_active_hash :goods_condition
 - belongs_to_active_hash :shipping_fee
