@@ -10,7 +10,7 @@ describe User do
         expect(@item).to be_valid
       end
       it "priceが半角数字かつ300~9999999の範囲内であれば登録できる" do
-        @item.price = "32000"
+        @item.price = 32000
         expect(@item).to be_valid
       end
     end
@@ -87,12 +87,12 @@ describe User do
         expect(@item.errors.full_messages).to include("Price can't be blank")
       end
       it "priceが300以下だと登録できない" do
-        @item.price = "299"
+        @item.price = 299
         @item.valid?
         expect(@item.errors.full_messages).to include("Price out of range")
       end
       it "priceが9999999以上だと登録できない" do
-        @item.price = "10000000"
+        @item.price = 10000000
         @item.valid?
         expect(@item.errors.full_messages).to include("Price out of range")
       end
