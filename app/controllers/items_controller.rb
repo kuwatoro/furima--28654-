@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
-  before_action :set_item, only: [:edit, :show, :update]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :set_item, only: [:edit, :show, :update, :destroy]
 
   def index
     @items = Item.all.order("created_at DESC")
@@ -41,6 +41,16 @@ class ItemsController < ApplicationController
     end
   end
 
+  def destroy
+    if current_user.id == @item.user_id
+      @item.destroy
+    end
+    redirect_to root_path  #current_userと出品者が一致してもしなくても、いつでもリダイレクト
+  #悪意のあるユーザーからの攻撃を防ぐため、viewの条件と同様にif文を使用して
+  #「出品したユーザー（とcurrent_userが一致）の場合に削除できる」というコードにしておきましょう。
+  #（ビューでは検証ツールを使用すると削除ボタンを作成できてしまうため）
+  end
+  
   private
 
   def item_params
