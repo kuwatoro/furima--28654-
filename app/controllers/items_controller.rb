@@ -25,16 +25,17 @@ class ItemsController < ApplicationController
   def edit
     if current_user.id != @item.user_id
       redirect_to root_path
-    else
-      render :edit
     end
-    # （操作者）が（商品の出品者）と異なる場合　→　redirect_to root_path
+    # （操作者）が（商品の出品者）と異なる場合 → redirect_to root_path
+    #editアクションでは、特に指定しない場合は対応するeditのビューが表示されますので、
+    #current_userと出品者が一致した場合のrender :editは省略できます。
   end
 
   def update
-    @item.update(item_params)
-    if @item.save
+    if @item.update(item_params)
       redirect_to item_path(@item)
+      #updateアクションでは、商品情報の更新の成功失敗で分岐処理をしていただければと存じます。
+      #商品情報の更新処理をするのは、@item.update(item_params)になりますので、今回はsaveメソッドを使用する必要はございません。
     else
       render :edit
     end
