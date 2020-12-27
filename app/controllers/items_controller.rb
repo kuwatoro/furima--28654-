@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_item, only: [:edit, :show, :update, :destroy]
 
   def index
@@ -20,11 +20,9 @@ class ItemsController < ApplicationController
   end
 
   def show
-    #@item = Item.find(params[:id])
   end
 
   def edit
-    #@item = Item.find(params[:id])
     if current_user.id != @item.user_id
       redirect_to root_path
     end
@@ -34,7 +32,6 @@ class ItemsController < ApplicationController
   end
 
   def update
-    #@item = Item.find(params[:id])
     if @item.update(item_params)
       redirect_to item_path(@item)
       #updateアクションでは、商品情報の更新の成功失敗で分岐処理をしていただければと存じます。
@@ -45,11 +42,15 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    #@item = Item.find(params[:id])
-    @item.destroy
-    redirect_to root_path
+    if current_user.id == @item.user_id
+      @item.destroy
+    end
+    redirect_to root_path  #current_userと出品者が一致してもしなくても、いつでもリダイレクト
+  #悪意のあるユーザーからの攻撃を防ぐため、viewの条件と同様にif文を使用して
+  #「出品したユーザー（とcurrent_userが一致）の場合に削除できる」というコードにしておきましょう。
+  #（ビューでは検証ツールを使用すると削除ボタンを作成できてしまうため）
   end
-
+  
   private
 
   def item_params
