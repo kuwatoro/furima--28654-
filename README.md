@@ -16,7 +16,7 @@
 ### Association
 
 - has_many :items
-- has_many :users_items
+- has_many :order
 
 ## items テーブル
 
@@ -35,14 +35,14 @@
 ### Association
 
 - belongs_to :user
-- has_one :user_item
+- has_one :order
 - belongs_to_active_hash :category 
 - belongs_to_active_hash :goods_condition
 - belongs_to_active_hash :shipping_fee
 - belongs_to_active_hash :prefecture
 - belongs_to_active_hash :delivery_time
 
-## users_items テーブル
+## order_residences テーブル
 
 | Column    | Type       | Options                        |
 | --------- | ---------- | ------------------------------ |
@@ -65,10 +65,10 @@
 | street_number    | string     | null: false                    |
 | building_name    | string     |                                |
 | telephone_number | string     | null: false                    |
-| user_item        | references | null: false, foreign_key: true |
+| order            | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to ：user_item
+- belongs_to ：order
 - belongs_to_active_hash :prefecture
 
