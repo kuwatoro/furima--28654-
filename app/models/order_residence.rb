@@ -11,6 +11,8 @@ class OrderResidence
     validates :street_number
     validates :telephone_number, numericality: { with: /\A\d{10,11}\z/ }
     validates :token
+    validates :user_id
+    validates :item_id
   end
     validates :prefecture_id, numericality: { other_than: 1 }
 

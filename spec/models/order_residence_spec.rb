@@ -1,7 +1,11 @@
 require 'rails_helper'
 describe User do
   before do
-    @order_residence = FactoryBot.build(:order_residence)
+    buyer = FactoryBot.create(:user) 
+    item = FactoryBot.create(:item)
+    @order_residence = FactoryBot.build(:order_residence, user_id: buyer.id, item_id: item.id )
+    # userとitemのidを作って@order_residenceに代入
+    sleep (0.5) #処理速度0.5秒後に実行
   end
 
   describe '商品の購入' do
@@ -10,13 +14,8 @@ describe User do
         expect(@order_residence).to be_valid
       end
 
-      it "zip_codeがハイフンありの7桁であれば登録できる" do
-        @order_residence.zip_code = "123-4567"
-        expect(@order_residence).to be_valid
-      end
-      
-      it "telephone_numberがハイフン無しの11桁以内であれば登録できる" do
-        @order_residence.telephone_number = "09012345678"
+      it "building_nameが空でも登録できる" do
+        @order_residence.building_name = ""
         expect(@order_residence).to be_valid
       end
     end
@@ -92,6 +91,18 @@ describe User do
         @order_residence.token = ""
         @order_residence.valid?
         expect(@order_residence.errors.full_messages).to include("Token can't be blank")
+      end
+
+      it "user_idが空だと登録できない" do
+        @order_residence.user_id = ""
+        @order_residence.valid?
+        expect(@order_residence.errors.full_messages).to include("User can't be blank")
+      end
+
+      it "item_idが空だと登録できない" do
+        @order_residence.item_id = ""
+        @order_residence.valid?
+        expect(@order_residence.errors.full_messages).to include("Item can't be blank")
       end
     end
   end

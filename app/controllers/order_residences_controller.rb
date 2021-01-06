@@ -1,10 +1,10 @@
 class OrderResidencesController < ApplicationController
   before_action :authenticate_user!, only: [:index]
   # ユーザがログインしているかどうかを確認し、ログインしていない場合はユーザをログインページにリダイレクトする。
+  before_action :set_order_residence, only: [:index, :create]
 
   def index
     @order_residence = OrderResidence.new
-    @item = Item.find(params[:item_id])
     #ルーティングのネスト。 rails routesをみるとパスが :item_id になっている
     if current_user.id == @item.user_id || @item.order != nil
           # ログインユーザーと出品者が同じ,またはitemの中にorderのデータがある場合
@@ -17,7 +17,6 @@ class OrderResidencesController < ApplicationController
 
   def create
     @order_residence = OrderResidence.new(order_residence_params)
-    @item = Item.find(params[:item_id])
     if @order_residence.valid?
       pay_item
       @order_residence.save
@@ -44,7 +43,10 @@ class OrderResidencesController < ApplicationController
         #Payjpは決済のみ。住所などの情報はいらない。
       ) 
   end
-  
+
+  def set_order_residence
+    @item = Item.find(params[:item_id])
+  end
 end
 
 # indexアクション：購入情報入力ページ /items/:id/order_residences
