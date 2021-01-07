@@ -8,7 +8,7 @@ class OrderResidencesController < ApplicationController
     #ルーティングのネスト。 rails routesをみるとパスが :item_id になっている
     if current_user.id == @item.user_id || @item.order != nil
           # ログインユーザーと出品者が同じ,またはitemの中にorderのデータがある場合
-          # どちらかに当てはまればトップページ、当てはまなければ購入ページへ
+          # どちらかに当てはまればトップページ、当てはまらなければ購入ページへ
       redirect_to root_path
     else
       render :index
