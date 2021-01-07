@@ -127,20 +127,22 @@
     <ul class='item-lists'>
 
       <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
-      <% if @items.length != 0 %>
+      <% if @items.length != 0 %> 
+        <%# テーブルのデータが存在するのか判断している。@itemsだけだと0と比較できないのでlengthメソッドをつける %>
+        <%# データがある場合はその画像を、無い場合はダミーの画像を表示させるようにする %>
         <% @items.each do |item| %>
           <li class='list'>
             <%= link_to item_path(item.id) do %>
               <div class='item-img-content'>
                 <%= image_tag item.image, class: "item-img" %>
                 <%# 商品が売れていればsold outを表示しましょう %>
-              <%# if %>
-                <%# .each do%>
+              <% if item.order != nil %> <%# itemは上の |item| の事。%>
+              <%# itemの中にorderのデータがあるかを判断する %>
+              <%# データがあれば購入されたことになり、 Sold Out!!  を表示させる %>
                   <div class='sold-out'>
                     <span>Sold Out!!</span>
-                  </div>
-                <%# end %>
-              <%# end %>
+                  </div> 
+              <% end %>
                 <%# //商品が売れていればsold outを表示しましょう %>
               </div>
               <div class='item-info'>

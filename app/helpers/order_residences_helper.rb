@@ -1,0 +1,2 @@
+module OrderResidencesHelper
+end
