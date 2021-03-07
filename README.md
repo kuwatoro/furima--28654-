@@ -17,6 +17,7 @@
 
 - has_many :items
 - has_many :order
+- has_many :message
 
 ## items テーブル
 
@@ -41,6 +42,7 @@
 - belongs_to_active_hash :shipping_fee
 - belongs_to_active_hash :prefecture
 - belongs_to_active_hash :delivery_time
+- has_many :message
 
 ## order_residences テーブル
 
@@ -71,4 +73,17 @@
 
 - belongs_to ：order
 - belongs_to_active_hash :prefecture
+
+## messages テーブル
+
+| Column    | Type       | Options                        |
+| --------- | ---------- | ------------------------------ |
+| user      | references | null: false, foreign_key: true |
+| item      | references | null: false, foreign_key: true |
+| text      | text       | null: false                    |
+
+### Association
+
+- belongs_to ：user
+- belongs_to ：item
 

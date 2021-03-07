@@ -5,7 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   has_many :items
-  has_many :order
+  has_many :orders
+  has_many :comments
   
   validates :nickname, presence: true
   validates :email, presence: true, uniqueness: { case_sensitive: true }

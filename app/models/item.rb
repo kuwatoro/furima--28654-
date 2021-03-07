@@ -1,7 +1,7 @@
 class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
 
-  belongs_to :user
+  belongs_to :user            #belongs_to :モデル単数形
   has_one :order
   belongs_to :category 
   belongs_to :goods_condition
@@ -9,6 +9,7 @@ class Item < ApplicationRecord
   belongs_to :prefecture
   belongs_to :delivery_time
   has_one_attached :image
+  has_many :comments          #has_many :モデル複数形
 
   validates :name, :goods_explain, presence: true
   validates :category_id, :goods_condition_id, :shipping_fee_id, :prefecture_id, :delivery_time_id, numericality: { other_than: 1 } 

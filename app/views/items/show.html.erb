@@ -81,6 +81,16 @@
           <th class="detail-item">発送日の目安</th>
           <td class="detail-value"><%= @item.delivery_time.name %></td>
         </tr>
+        <tr>
+          <th class="detail-item">コメント</th>
+          <td class="detail-value">
+            <div id='messages'>
+              <% @comments.reverse_each do |comment| %>
+                <br><%= comment.text %>
+              <% end %>
+            </div>
+          </td>
+        </tr>
       </tbody>
     </table>
     <div class="option">
@@ -97,18 +107,17 @@
   <%# /商品の概要 %>
 
   <div class="comment-box">
-    <form>
-      <textarea class="comment-text"></textarea>
-      <p class="comment-warn">
+    <%= form_with model: [@item, @comment], url: item_comments_path(@item), local: true do |f| %><%# rails routesで確認 %>
+      <%= f.text_field :text ,class: "comment-text"%>
+        <p class="comment-warn">
         相手のことを考え丁寧なコメントを心がけましょう。
         <br>
         不快な言葉遣いなどは利用制限や退会処分となることがあります。
       </p>
-      <button type="submit" class="comment-btn">
-        <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
-        <span>コメントする<span>
-      </button>
-    </form>
+      <div>
+        <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25" %><%= f.submit "コメントする" ,class:"comment-btn" %>
+      </div>
+    <% end %>
   </div>
   <div class="links">
     <a href="#" class="change-item-btn">
